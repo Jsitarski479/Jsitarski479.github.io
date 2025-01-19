@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap'); /* Imports a custom Google font */
+
+/* General Reset */
+* {
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Ensures padding and border are included in an element's total width and height */
+}
+
+/* Base styles for body and font */
+body {
+    font-family: 'Funnel Display', sans-serif; /* Sets the font family to Funnel Display */
+    font-size: 16px; /* Sets the base font size */
+    line-height: 1.6; /* Increases line spacing for better readability */
+    background-color: #C3B1E1; /* Sets the background color */
+    color: #4A4E69; /* Sets the text color */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+:root {
+    --Background: #A1C6EA; /* Defines a CSS variable for the background color */
+    --Primary: #C3B1E1; /* Defines a CSS variable for primary color */
+    --Secondary: #7FDBDA; /* Defines a CSS variable for secondary color */
+    --Accent: #6B728E; /* Defines a CSS variable for accent color */
+    --Text: #4A4E69; /* Defines a CSS variable for text color */
+    --Complimentary: #F7CACA; /* Defines a CSS variable for complimentary color */
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
+/* Navigation Bar */
+.top_bar {
+    position: fixed; /* Fixes the navigation bar at the top of the page */
+    top: 0; /* Positions the bar at the very top */
+    width: 100%; /* Makes the bar span the full width of the viewport */
+    background-color: var(--Background); /* Uses the defined background color */
+    z-index: 1000; /* Ensures the bar stays above other elements */
+    border-bottom: 2px solid black; /* Adds a black border at the bottom */
+    height: 60px; /* Sets the height of the bar */
+    display: flex; /* Activates flexbox layout */
+    align-items: center; /* Vertically centers items within the bar */
+}
+
+.top_bar ul {
+    list-style: none; /* Removes default bullet points from the list */
+    display: flex; /* Arranges list items in a row */
+    gap: 30px; /* Adds space between list items */
+    margin: 0; /* Removes default margin */
+    padding: 0 20px; /* Adds padding on the left and right sides */
+    justify-content: flex-start; /* Aligns list items to the left */
+    width: 100%; /* Ensures the list spans the full width */
+}
+
+.top_bar a {
+    text-decoration: none; /* Removes underline from links */
+    color: var(--Text); /* Uses the defined text color */
+    font-size: 1rem; /* Sets the font size of links */
+    font-weight: bold; /* Makes the links bold */
+    transition: color 0.3s ease; /* Smoothly changes color on hover */
+}
+
+.top_bar a:hover {
+    color: #000; /* Changes the link color to black on hover */
+}
+
+/* About Section */
+.about_section {
+    height: 100vh; /* Makes the section span the full height of the viewport */
+    display: flex; /* Activates flexbox layout */
+    flex-direction: column; /* Arranges child elements in a column */
+    justify-content: center; /* Centers items vertically */
+    align-items: center; /* Centers items horizontally */
+    text-align: center; /* Aligns text to the center */
+    background-color: var(--Primary); /* Uses the primary background color */
+    border-bottom: 2px solid black; /* Adds a black border at the bottom */
+}
+
+.about_title {
+    font-size: 3rem; /* Sets a large font size for the title */
+    font-weight: bold; /* Makes the title bold */
+    color: var(--Text); /* Uses the text color */
+}
+
+.about_description {
+    font-size: 1rem; /* Sets the font size for descriptions */
+    color: var(--Text); /* Uses the text color */
+    margin-top: 10px; /* Adds space above the description */
+    font-style: italic; /* Italicizes the text */
+}
+
+/* Project Section */
+.section__projects {
+    background-color: var(--Background); /* Uses the background color */
+    padding: 2rem 0; /* Adds padding to the top and bottom */
+    border-bottom: 2px solid black; /* Adds a black border at the bottom */
+}
+
+.section__projects h2 {
+    color: var(--Text); /* Sets the text color for the section title */
+    text-align: left; /* Aligns the text to the left */
+    margin-left: 20px; /* Adds a left margin to the title */
+    text-decoration-line: overline underline; /* Adds a line above and below the text */
+    line-height: 3; /* Increases spacing between lines */
+    margin-top: -6.5vh; /* Moves the heading slightly upward */
+}
+
+.projects__div {
+    display: flex; /* Activates flexbox layout */
+    flex-direction: column; /* Stacks child elements in a column */
+    align-items: flex-start; /* Aligns child elements to the left */
+}
+
+.projects__images {
+    width: 300px; /* Sets the width of the images */
+    aspect-ratio: 4 / 3; /* Maintains a 4:3 aspect ratio */
+    object-fit: contain; /* Ensures the image fits within its container */
+    transform: scale(1); /* Keeps the image at its original size */
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth scaling animation */
+    margin-left: 20px; /* Adds a left margin to the images */
+}
+
+.projects__images:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow effect on hover */
+}
+
+.projects__p {
+    background-color: var(--Background); /* Sets the background color for text */
+    font-weight: bold; /* Makes the text bold */
+    padding: 1rem; /* Adds padding around the text */
+    font-size: 1.2rem; /* Sets the font size */
+    border-bottom: 2px solid black; /* Adds a black border at the bottom */
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth scaling animation */
+    margin-left: 20px; /* Adds a left margin */
+}
+
+.projects__p:hover {
+    transform: scale(1.02); /* Slightly enlarges the text on hover */
+    filter: brightness(1.05); /* Makes the text slightly brighter */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow effect */
+}
+
+.project-item {
+    display: flex; /* Activates flexbox layout */
+    flex-direction: row; /* Aligns items in a row */
+}
+
+.na {
+    display: flex; /* Activates flexbox layout */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    margin-top: -20px; /* Moves the entire section upward */
+    gap: 1rem; /* Adds space between child elements */
+}
+
+.na img {
+    margin-left: 8.5vw; /* Adds a left margin to center the image */
+    margin-bottom: 0.5rem; /* Adds space below the image */
+    width: 30vw; /* Sets the image width to 30% of the viewport width */
+    height: auto; /* Maintains the image's aspect ratio */
+}
+
+.na img:hover {
+    transform: none !important; /* Disables scaling on hover */
+    box-shadow: none !important; /* Removes any hover shadow effect */
+    filter: none !important; /* Disables brightness adjustments on hover */
+    transition: none !important; /* Disables animations on hover */
+}
+
+.na h2 {
+    margin-left: 8.5vw; /* Adds a left margin to align the heading */
+    font-size: 2rem; /* Sets the font size of the title */
+    margin-bottom: 0.5rem; /* Adds space below the title */
+}
+
+.na p {
+    margin-left: 8.5vw; /* Adds a left margin to align the paragraph */
+    font-size: 1.2rem; /* Sets the font size for the paragraph */
+    margin-top: 0.5rem; /* Adds space above the paragraph */
+}
+
+.textboxes {
+    display: flex; /* Activates flexbox layout */
+    flex-direction: column; /* Stacks textboxes vertically */
+    margin-top: 10px; /* Adds space above the textboxes */
+    margin-left: 10px; /* Adds a left margin to the textboxes */
+}
+
+.middletext,
+.bottomtext {
+    margin-top: 30px; /* Adds space above each element */
+}
+
+
+/* Project Details */
+.project-container {
+    display: flex; /* Enables flexbox layout for the container */
+    flex-direction: row; /* Arranges child elements in a row */
+    justify-content: space-between; /* Spreads child elements across the container */
+    align-items: flex-start; /* Aligns child elements to the top */
+    height: 80vh; /* Sets the height to 80% of the viewport height */
+    margin: 80px auto; /* Adds vertical margin and centers horizontally */
+    max-width: 90%; /* Limits the width to 90% of the container */
+    gap: 2rem; /* Adds space between child elements */
+    padding-right: 5%; /* Adds padding on the right */
+}
+
+.project-details {
+    flex: 0 0 80%; /* Allocates 80% of the container width */
+    background-color: #f0f0f0; /* Sets a light gray background color */
+    padding: 2.5rem; /* Adds padding inside the element */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow effect */
+    overflow-y: auto; /* Allows vertical scrolling if content overflows */
+    margin-top: 10px; /* Adds space above the element */
+    margin-left: -3%; /* Pulls the element slightly to the left */
+    min-height: 73vh; /* Ensures a minimum height of 73% of the viewport height */
+}
+
+/* About Section - Parent Container */
+.descrption_collection {
+    display: flex; /* Enables flexbox layout for alignment */
+    flex-direction: row; /* Arranges child elements in a row */
+    align-items: center; /* Vertically centers child elements */
+    gap: 3rem; /* Adds space between image and text */
+    opacity: 0; /* Initially makes the element fully transparent */
+    transform: translateY(20px); /* Moves the element down by 20px */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth fade-in and movement effect */
+    visibility: hidden; /* Hides the element initially */
+}
+
+.descrption_collection.visible {
+    opacity: 1; /* Makes the element fully visible */
+    transform: translateY(0); /* Moves the element back to its original position */
+    visibility: visible; /* Ensures the element is interactive */
+}
+
+/* About Section - Container */
+.description_section {
+    height: calc(100vh - 60px); /* Sets height to the full viewport height minus 60px for the navigation bar */
+    background-color: var(--Complimentary); /* Uses the complimentary color from the palette */
+    border-top: 0.8px solid black; /* Adds a thin black border on top */
+    border-bottom: 2.2px solid black; /* Adds a thicker black border at the bottom */
+    padding: 3rem; /* Adds padding inside the container */
+}
+
+.self-pic {
+    width: 25vw; /* Sets the width to 25% of the viewport width */
+    height: auto; /* Maintains the image's aspect ratio */
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    border: 4px solid #4A4E69; /* Adds a solid border around the image */
+}
+
+.description_texts {
+    display: flex; /* Enables flexbox for alignment */
+    flex-direction: column; /* Stacks text elements vertically */
+    justify-content: center; /* Centers the text elements vertically */
+}
+
+.description_top {
+    font-size: 3rem; /* Sets a large font size for the text */
+    margin-bottom: 1.5rem; /* Adds space below the text */
+    margin-top: -10px; /* Pulls the text slightly upwards */
+}
+
+.description_title {
+    margin-left: 20px; /* Adds a left margin to align the title */
+    margin-top: 0; /* Removes extra space above the title */
+    text-decoration-line: underline; /* Adds a line below the text */
+    font-size: 2.2rem; /* Sets the font size of the title */
+}
+
+.description_middle {
+    font-size: 1.3rem; /* Sets a slightly larger font size for readability */
+    line-height: 2; /* Increases line spacing for better readability */
+}
+
+/* Social Links */
+.social_links {
+    display: flex; /* Enables flexbox for alignment */
+    justify-content: center; /* Centers the social links horizontally */
+    align-items: center; /* Aligns items vertically */
+    gap: 1rem; /* Adds spacing between links */
+    margin-top: 2rem; /* Adds space above the links */
+    font-size: 1rem; /* Sets a consistent font size */
+}
+
+.social_links .dash {
+    margin: 0; /* Removes default margin */
+    line-height: normal; /* Ensures normal line height */
+    font-size: 2rem; /* Sets a larger font size for the dash */
+}
+
+/* Project Images */
+.project-pics {
+    flex: 0 0 30%; /* Allocates 30% of the container width */
+    display: flex; /* Enables flexbox for alignment */
+    flex-direction: column; /* Stacks project images vertically */
+    gap: 1rem; /* Adds spacing between images */
+    margin-top: 10px; /* Adds space above the project images */
+}
+.projects__picU {
+    width: 100%; /* Makes the image take up full width of its container */
+    height: auto; /* Maintains the image's aspect ratio */
+    max-height: 35vh; /* Limits the image height to 35% of the viewport height */
+    border-radius: 10px; /* Rounds the corners of the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+}
+
+/* Links */
+.project-links {
+    display: flex; /* Enables flexbox layout for alignment */
+    flex-direction: row; /* Arranges child elements in a row */
+    justify-content: space-between; /* Spreads elements across the row */
+    align-items: flex-start; /* Aligns child elements to the top */
+    height: 80vh; /* Sets the height to 80% of the viewport height */
+    margin: 25px auto; /* Adds vertical margin and centers horizontally */
+    margin-right: 8.5vw; /* Adds margin on the right for spacing */
+    max-width: 90%; /* Limits the width to 90% of the container */
+    gap: 2rem; /* Adds spacing between child elements */
+}
+
+.google-slide {
+    flex: 0 0 76%; /* Allocates 76% of the container width */
+    height: 100%; /* Sets height to 100% of its parent */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow effect */
+}
+
+.right_links {
+    flex: 0 0 30%; /* Allocates 30% of the container width */
+    display: flex; /* Enables flexbox layout for alignment */
+    flex-direction: column; /* Stacks elements vertically */
+    justify-content: space-between; /* Spreads items evenly across the column */
+    align-items: center; /* Centers items horizontally */
+    gap: 1rem; /* Adds spacing between child elements */
+}
+
+.right_links img {
+    width: 95%; /* Sets the image width to 95% of its parent */
+    height: auto; /* Maintains the image's aspect ratio */
+    min-height: 35vh; /* Sets a minimum height of 35% of the viewport height */
+    border-radius: 10px; /* Rounds the corners of the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+}
+
+.project-link {
+    display: block; /* Makes the element a block-level element */
+    text-align: center; /* Centers the text */
+    padding: 0.8rem 1.5rem; /* Adds padding inside the button */
+    font-size: 1.2rem; /* Sets the font size */
+    color: white; /* Sets the text color to white */
+    background-color: var(--Accent); /* Sets the background color to the accent color */
+    border-radius: 10px; /* Rounds the corners */
+    text-decoration: none; /* Removes the underline from the text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adds smooth hover transitions */
+}
+
+.project-link:hover {
+    background-color: var(--Text); /* Changes background color on hover */
+    transform: translateY(-2px); /* Slightly raises the element on hover */
+}
+
+.right_links .second-img {
+    width: 70%; /* Sets the width to 70% of its container */
+    height: auto; /* Maintains the image's aspect ratio */
+    border-radius: 5px; /* Rounds the corners */
+    box-shadow: none; /* Removes shadow effect */
+    margin-left: 3vw; /* Adds left margin for spacing */
+}
+
+/* Contact Section */
+.contact_section {
+    background-color: var(--Secondary); /* Sets the background color to the secondary color */
+    padding: 2rem; /* Adds padding inside the section */
+    text-align: center; /* Centers text within the section */
+    min-height: 100vh; /* Sets the minimum height to the full viewport height */
+    margin-top: 40px; /* Adds space above the section */
+}
+
+.contact_title {
+    font-size: 2.5rem; /* Sets the font size for the title */
+    color: var(--Text); /* Sets the text color */
+    margin-bottom: 1rem; /* Adds space below the title */
+}
+
+.contact_description {
+    font-size: 1.2rem; /* Sets the font size for the description */
+    color: var(--Text); /* Sets the text color */
+    margin-bottom: 2rem; /* Adds space below the description */
+}
+
+.contact_form {
+    max-width: 600px; /* Limits the form width to 600px */
+    margin: 0 auto; /* Centers the form horizontally */
+    display: flex; /* Enables flexbox for alignment */
+    flex-direction: column; /* Stacks form elements vertically */
+    gap: 1.5rem; /* Adds spacing between form elements */
+}
+
+.form_group {
+    display: flex; /* Activates Flexbox for layout */
+    flex-direction: column; /* Stacks the form elements vertically */
+    text-align: left; /* Aligns text within the group to the left */
+}
+
+label {
+    font-size: 1rem; /* Sets font size for labels */
+    margin-bottom: 0.5rem; /* Adds spacing below labels */
+    color: var(--Text); /* Uses the text color defined in the root */
+}
+
+input, textarea {
+    padding: 0.8rem; /* Adds space inside the input fields */
+    font-size: 1rem; /* Sets font size for input text */
+    border: 1px solid var(--Accent); /* Defines border with accent color */
+    border-radius: 5px; /* Rounds the edges of the fields */
+    outline: none; /* Removes the default outline */
+}
+
+input:focus, textarea:focus {
+    border-color: var(--Primary); /* Changes border color when focused */
+    box-shadow: 0 0 5px var(--Primary); /* Adds a glowing effect */
+}
+
+.contact_button {
+    background-color: var(--Accent); /* Sets background color for the button */
+    color: white; /* Sets the text color to white */
+    font-size: 1rem; /* Sets font size */
+    padding: 0.8rem; /* Adds padding inside the button */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounds the edges */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.contact_button:hover {
+    background-color: var(--Text); /* Changes background color on hover */
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0; /* Initially hides the element */
+    transform: translateY(20px); /* Moves element slightly down */
+    visibility: hidden; /* Makes it non-interactive */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth fade-in */
+}
+
+.fade-in.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Moves element to its original position */
+    visibility: visible; /* Makes it interactive */
+}
+
+.SMImage {
+    max-width: 40px; /* Limits image width to 40px */
+    max-height: 40px; /* Limits image height to 40px */
+}
+
+.dash {
+    margin: -30px 0 0 0; /* Adjusts positioning */
+    align-self: center; /* Centers the dash horizontally */
+    line-height: 3; /* Adjusts line height */
+    font-size: 2rem; /* Increases font size */
+}
+
+/* Filter Section */
+.filter__bar {
+    display: flex; /* Enables Flexbox for layout */
+    flex-direction: column; /* Arranges items vertically */
+    justify-content: center; /* Centers items */
+    gap: 1rem; /* Adds spacing between elements */
+    padding: 1rem; /* Adds padding inside the filter bar */
+    background-color: #f0f0f0; /* Light gray background */
+    border-bottom: 2px solid black; /* Adds a black border at the bottom */
+}
+
+.filter_text {
+    text-align: center; /* Centers text horizontally */
+}
+
+.inside_filter {
+    display: flex; /* Enables Flexbox for layout */
+    justify-content: center; /* Centers buttons */
+    gap: 1rem; /* Adds space between buttons */
+}
+
+.filter__bar button {
+    font-size: 1rem; /* Sets font size for buttons */
+    padding: 0.5rem 1rem; /* Adds padding inside the button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-weight: bold; /* Makes text bold */
+    border: 1px solid #ccc; /* Sets a light gray border */
+    background-color: white; /* Sets button background to white */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.filter__bar button:hover {
+    background-color: #ccc; /* Changes background color on hover */
+}
+
+.joke_section {
+    margin-top: 2rem; /* Adds spacing above the section */
+    text-align: center; /* Centers text */
+    font-style: italic; /* Adds an italic style to text */
+    color: var(--Text); /* Uses text color from root */
+}
+
+#joke-punchline {
+    font-weight: bold; /* Makes the text bold */
+    color: var(--Accent); /* Uses accent color */
+}
+
+.joke_container {
+    display: flex; /* Enables Flexbox for layout */
+    align-items: center; /* Vertically centers items */
+    gap: 0.5rem; /* Adds space between elements */
+}
+
+.joke_container .about_description {
+    margin: 0; /* Removes any default margin */
+    white-space: nowrap; /* Prevents text from wrapping */
+}

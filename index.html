@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joey's Personal Website</title>
+    <link rel="stylesheet" href="css/Personal_Portfolio.css">
+    <!-- Loads shared navigation dynamically -->
+    <script defer src="js/shared-navigation.js"></script>
+</head>
+<body>
+    <!-- Placeholder for shared navigation -->
+    <header id="top__bar"></header>
+    <main>
+        <!-- Home Section -->
+        <section class="about_section" id = "about-section">
+            <h1 class="about_title">Joey's Personal Website</h1>
+            <div class = "joke_container">
+            <p class = "about_description">Joke of the day: </p>
+            <p id="joke-setup" class="about_description">Loading joke...</p>
+            </div>
+            <p class = "about_description">(Answer at the bottom of page)</p>
+        </section>
+
+        <!-- About Section -->
+         <section class="description_section">
+            <h1 class ="description_title">About me</h1>
+            <div class = "descrption_collection">
+            <img src = "images/IMG_3856.PNG" class = self-pic>
+            <div class = "description_texts"> 
+            <h1 class = "description_top">Hello!</h1>
+            <h3 class = "description_middle">My name is Joseph Sitarski, and I am a freshman at the University of Michigan's College of
+                Engineering studying Computer Engineering with a minor in Data Science. I created this 
+                website to showcase the projects I've worked on in classes, extracurriculars, and in my own time. If you're interedsted, you can use this page to 
+                view my work, contact me directly, or enjoy the joke of the day. Thanks for stopping by!
+            </h3>
+            </div>
+            </div>
+         </section>
+
+
+        <!-- Filter Section -->
+        <div class="filter__bar">
+            <h3 class= "filter_text">Select the button to show what projects I worked on in that year</h3>
+            <div class = inside_filter>
+            <button data-filter-year="2024">2024</button>
+            <button data-filter-year="2025">2025</button>
+            <button data-filter-year="2026">2026</button>
+            <button data-filter-year="2027">2027</button>
+            </div>
+        </div>
+
+
+        <!-- Work Section -->
+        <section class="section__projects" id="projects">
+            <h2>These are my projects</h2>
+            <div class="projects__div">
+
+
+
+                <!-- Project 1 -->
+                <div class = "project-item fade-in" data-year="2024">
+
+                <a href="project1.html" data-project="project1"  class="project-tile">
+                <img class="projects__images" src="images\Screenshot 2024-12-25 003800.png">
+                </a>
+                <div class = "textboxes">
+                <p class = "toptext">
+                    Description: Uses a data set of RePORTER Publications in 2023 from the National Institutes of Health with ~84,000 studies to determine 
+                    whether or not there's a correlation between the population of a city and the cost to do a study there
+                </p>
+                <p class = "middletext">
+                    Technologies/Skills: Google Copilot, Python, Natural Language Processing, Matplotlib
+                </p>
+                <p class = "bottomtext">
+                    Date: 11/17/2024
+                </p>
+                </div>
+                </div>
+
+                <a href="project1.html" data-project="project1"  class="project-tile" data-year="2024">
+                <p class="projects__p">Research Grant Analysis</p>
+                </a>
+
+
+                <!-- Project 2 -->
+                <div class = "project-item fade-in" data-year="2024">
+
+                <a href="project2.html" data-project="project2" class="project-tile">
+                <img class="projects__images" src="images\Screenshot 2025-01-06 223747.png">
+                </a>
+                <div class = "textboxes">
+                    <p class = "toptext">
+                        Description: A website built to showcase my projects, achievements, and interests. It's designed to highlight my work in an organized
+                        manner complimented by dynamically loaded navigation, smooth scrolling, and responsive layouts
+                    </p>
+                    <p class = "middletext">
+                        Technologies/Skills: HTML, Dynamic Content Embedding, CSS, Flexbox, JavaScript, DOM manipulation, Event Handling
+                    </p>
+                    <p class = "bottomtext">
+                        Date: 12/22/2024
+                    </p>
+                    </div>
+                    </div>
+
+                <a href="project2.html" data-project="project1" class="project-tile" data-year="2024">
+                <p class="projects__p">Personal Portfolio Website</p>
+                </a>
+
+
+
+                <!-- Project 3 -->
+                <div class = "na" data-year="2025">
+                    <h2 class = "unknown_title">Stay Tuned!</h2>
+                    <img class="projects__images" src="images\Screenshot 2025-01-18 172643.png">
+                    <p class = "unknown_text">I don't have any work to show off for this year right now, but be sure to check in later and 
+                        I'm sure to have more to see
+                    </p>
+                    </div>
+    
+
+                <!-- Project 4 --> 
+                <div class = "na" data-year="2026">
+                    <h2 class = "unknown_title">Stay Tuned!</h2>
+                    <img class="projects__images" src="images\Screenshot 2025-01-18 172643.png">
+                    <p class = "unknown_text">I don't have any work to show off for this year right now, but be sure to check in later and 
+                        I'm sure to have more to see
+                    </p>
+                    </div>
+
+
+                <!-- Project 5 -->
+                <div class = "na" data-year="2027">
+                    <h2 class = "unknown_title">Stay Tuned!</h2>
+                    <img class="projects__images" src="images\Screenshot 2025-01-18 172643.png">
+                    <p class = "unknown_text">I don't have any work to show off for this year right now, but be sure to check in later and 
+                        I'm sure to have more to see
+                    </p>
+                    </div>
+
+
+            </div>
+        </section>
+        <section id="project-details" class="hidden">
+
+        </section>
+
+
+        <section class="joke_section">
+            <footer id="joke-punchline" style="text-align: center; margin-top: 1rem;">
+                <em>Answer: <span id="punchline"></span></em>
+            </footer>
+        </section>
+        
+    </main>
+</body>
+</html>

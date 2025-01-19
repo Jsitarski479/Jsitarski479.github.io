@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Contact</title>
+    <link rel="stylesheet" href="css/Personal_Portfolio.css">
+    <!-- Loads shared navigation dynamically -->
+    <script defer src="js/shared-navigation.js"></script>
+</head>
+<body class="contact_body">
+    <!-- Placeholder for shared navigation -->
+    <header id="top__bar"></header>
+    <main>
+        <section class="contact_section fade-in">
+            <h1 class="contact_title">Get in Touch</h1>
+            <p class="contact_description">I'd love to hear from you! Feel free to reach out using the form below or through my social media pages</p>
+            <form class="contact_form" action="mailto:jsitarski479@gmail.com" method="post" enctype="text/plain">
+                <div class="form_group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form_group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form_group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form_group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="contact_button">Send Message</button>
+            </form>
+            <div class="social_links">
+                <a href="https://www.linkedin.com/in/joseph-sitarski-612920318/" target="_blank">
+                <img class = "SMImage" src = "images\5282542_linkedin_network_social network_linkedin logo_icon.png">
+                </a> 
+                <p class = "dash"> | </p>
+                <a href="https://github.com/Jsitarski479" target="_blank">
+                <img class = "SMImage" src = "images\github-mark.png">
+                </a> 
+            </div>
+        </section>
+    </main>
+</body>
+</html>
