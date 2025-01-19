@@ -103,7 +103,7 @@ html {
     margin-left: 20px; /* Adds a left margin to the title */
     text-decoration-line: overline underline; /* Adds a line above and below the text */
     line-height: 3; /* Increases spacing between lines */
-    margin-top: -6.5vh; /* Moves the heading slightly upward */
+    margin-top: -3.8vh; /* Moves the heading slightly upward */
 }
 
 .projects__div {
