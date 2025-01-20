@@ -274,7 +274,7 @@ html {
 }
 
 .description_middle {
-    font-size: 1.3rem; /* Sets a slightly larger font size for readability */
+    font-size: 1.rem; /* Sets a slightly larger font size for readability */
     line-height: 2; /* Increases line spacing for better readability */
 }
 
